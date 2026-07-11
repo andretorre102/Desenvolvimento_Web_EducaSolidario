@@ -68,6 +68,7 @@ Basta abrir o arquivo `index.html` diretamente no navegador, ou utilizar uma ext
 - [@Alana Lucas](https://github.com/alanalucasdev)
 - [@Francisco Eduardo](https://github.com/eduardofrancisco-collab)
 - [@Nayana Roberta](https://github.com/NayanaRoberta)
+- [@Flavia Amaro](https://github.com/Flavia-Amaro)
 
 
 
