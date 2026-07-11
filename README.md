@@ -65,3 +65,9 @@ Basta abrir o arquivo `index.html` diretamente no navegador, ou utilizar uma ext
 - [@Juliett Figueirêdo](https://github.com/juliettfigueiredodev)
 - [@Juan Carlos](https://github.com/JuanCostaDev)
 - [@André Felipe](https://github.com/andretorre102)
+- [@Alana Lucas](https://github.com/alanalucasdev)
+- [@Francisco Eduardo](https://github.com/eduardofrancisco-collab)
+- [@Nayana Roberta](https://github.com/NayanaRoberta)
+
+
+
