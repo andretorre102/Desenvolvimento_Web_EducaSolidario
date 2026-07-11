@@ -60,6 +60,7 @@ cd Desenvolvimento_Web_EducaSolidario
 - **JavaScript** — interações do site (em desenvolvimento)
 - **Git** — controle de versão do código-fonte
 - **GitHub** — hospedagem do repositório e colaboração
+- **Live Server** —  extensão do VsCode para atualização automática dO appWeb
 
 ## Equipe
 
