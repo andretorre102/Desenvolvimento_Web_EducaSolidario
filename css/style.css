@@ -50,7 +50,7 @@ p,a,li,button{
 /* MENU */
 
 
-header{
+header, footer{
 
     background:white;
     padding:20px 8%;
@@ -480,16 +480,6 @@ nav a{
 }
 
 /* RODAPÉ */
-
-footer {
-
-    width:100%;
-    background:#F8FAFC;
-    padding:30px 0;
-    margin-top:50px;
-
-}
-
 
 footer .rodape {
 
