@@ -23,13 +23,14 @@ Plataforma web para conectar doadores a instituições de ensino (escolas, ONGs 
 ### Instalação
 
 ```bash
-git clone https://github.com/usuario/EducaSolidario.git
-cd EducaSolidario
+git clone https://github.com/andretorre102/Desenvolvimento_Web_EducaSolidario.git
+cd Desenvolvimento_Web_EducaSolidario
 ```
 
 ### Executando o Projeto
 
-Basta abrir o arquivo `index.html` diretamente no navegador, ou utilizar uma extensão como o **Live Server** (VS Code) para servir os arquivos localmente.
+ Diretamente no seu navegador, basta digitar na barra de endereço `index.html` OU; 
+ Utilizar uma extensão como o **Live Server** (VS Code) para servir os arquivos localmente.
 
 ## Estrutura do Projeto
 
@@ -43,7 +44,7 @@ Basta abrir o arquivo `index.html` diretamente no navegador, ou utilizar uma ext
 │   ├── escola.jpg
 │   ├── instituto.jpg
 │   └── creche.jpg
-│
+│   └── favicon.ico
 ├── js/
 │   └── script.js           # Interações do site (em desenvolvimento)
 │
