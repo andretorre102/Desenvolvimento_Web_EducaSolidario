@@ -69,7 +69,6 @@ cd Desenvolvimento_Web_EducaSolidario
 - [@André Felipe](https://github.com/andretorre102)
 - [@Alana Lucas](https://github.com/alanalucasdev)
 - [@Francisco Eduardo](https://github.com/eduardofrancisco-collab)
-- [@Nayana Roberta](https://github.com/NayanaRoberta)
 - [@Flavia Amaro](https://github.com/Flavia-Amaro)
 
 
