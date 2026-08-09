@@ -321,6 +321,7 @@ img {
     }
     
     .auth-sidebar {
+        order: 2; /* Em telas menores, a barra lateral ficará embaixo, após os campos de formulário */
         max-width: 100%;
         padding: 2rem;
     }
@@ -330,6 +331,7 @@ img {
     }
 
     .auth-forms-container {
+        order: 1; /* Em telas menores, os campos de formulário aparecem primeiro na tela, e somente embaixo a barra lateral */
         padding: 2rem;
     }
 }
