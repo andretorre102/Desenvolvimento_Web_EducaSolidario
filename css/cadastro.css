@@ -324,6 +324,8 @@ img {
         order: 2; /* Em telas menores, a barra lateral ficará embaixo, após os campos de formulário */
         max-width: 100%;
         padding: 2rem;
+        align-items: center; /* centralizando... */
+        text-align: center;
     }
     
     .logo {
@@ -345,12 +347,11 @@ img {
 @media (max-width: 480px) {
     .auth-sidebar {
         padding: 1.5rem;
+        align-items: center; /* centralizando... */
+        text-align: center;
     }
 
-    .sidebar-content .subtitle {
-        margin-bottom: 1.5rem;
-    }
-
+    .sidebar-content .subtitle,  /* escondi informações que tem em telas menores para deixar o visual menos poluído */
     .features-list {
         display: none;
     }
