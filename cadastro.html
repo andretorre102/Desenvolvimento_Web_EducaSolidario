@@ -1,6 +1,6 @@
-<! HTML das Telas: 04 - Cadastro Instituição Selecionada; 
-                    05 - Cadastro Doador Selecionada; 
-                    08 - Cadastro Bem Sucedido. 
+<!-- HTML das Telas: 04 - Cadastro Instituição Selecionada; 
+                     05 - Cadastro Doador Selecionada; 
+                     08 - Cadastro Bem Sucedido. -->        <!-- Ajuste-->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -58,30 +58,46 @@
                     <button class="toggle-btn active" onclick="switchScreen('instituicao')">Instituição</button>
                 </div>
 
-                <form class="auth-form" action="#" onsubmit="event.preventDefault(); switchScreen('sucesso');">
+                <!-- ALTERAÇÃO DO [PF3] PARA LÓGICA DE FORMULÁRIOS
+                     Troquei a validação automática do HTML5 pelo JS.
+                     O onsubmtit chama a função validarFormulario() que faz a validação,
+                     ao invés de ir direto para a tela de sucesso switchScreen('sucesso') -->
+                  
+                <form class="auth-form" action="#" novalidate
+                      onsubmit="return validarFormulario(event, 'instituicao');">
+
+                    <!-- Alteração [PF3]: área de mensagem de erro/sucesso do formulário -->
+                    <div id="instituicao-form-msg" class="form-message" role="alert"></div>
+
                     <div class="input-group">
                         <label for="inst-nome">Nome da Instituição</label>
                         <input type="text" id="inst-nome" required>
+                        <span class="field-error" id="inst-nome-error"></span> <!-- Mensagem de erro do campo Nome Instituição -->
                     </div>
                     <div class="input-group">
                         <label for="inst-email">E-mail</label>
                         <input type="email" id="inst-email" required>
+                        <span class="field-error" id="inst-email-error"></span> <!-- Mensagem de erro do campo E-mail -->
                     </div>
                     <div class="input-group">
                         <label for="inst-cnpj">CNPJ</label>
                         <input type="text" id="inst-cnpj" required>
+                        <span class="field-error" id="inst-cnpj-error"></span> <!-- Mensagem de erro do campo CNPJ -->
                     </div>
                     <div class="input-group">
                         <label for="inst-tel">Telefone</label>
                         <input type="tel" id="inst-tel" required>
+                        <span class="field-error" id="inst-tel-error"></span> <!-- Mensagem de erro do campo Telefone -->
                     </div>
                     <div class="input-group">
                         <label for="inst-senha">Senha</label>
                         <input type="password" id="inst-senha" required>
+                        <span class="field-error" id="inst-senha-error"></span> <!-- Mensagem de erro do campo Senha -->
                     </div>
                     <div class="input-group">
                         <label for="inst-conf-senha">Confirmar senha</label>
                         <input type="password" id="inst-conf-senha" required>
+                        <span class="field-error" id="inst-conf-senha-error"></span> <!-- Mensagem de erro do campo Confirmar senha -->
                     </div>
                     
                     <div class="checkbox-group">
@@ -109,26 +125,36 @@
                     <button class="toggle-btn" onclick="switchScreen('instituicao')">Instituição</button>
                 </div>
 
-                <form class="auth-form" action="#" onsubmit="event.preventDefault(); switchScreen('sucesso');">
+            <!-- Veja comentário linha 61. Troca da validação para o JS e mensagem de erro/sucesso do formulário -->
+                <form class="auth-form" action="#" novalidate
+                      onsubmit="return validarFormulario(event, 'doador');">
+
+                    <div id="doador-form-msg" class="form-message" role="alert"></div>
+
                     <div class="input-group">
                         <label for="doa-nome">Nome Completo</label>
                         <input type="text" id="doa-nome" required>
+                        <span class="field-error" id="doa-nome-error"></span>   <!-- Mensagem de erro do campo Nome -->
                     </div>
                     <div class="input-group">
                         <label for="doa-email">E-mail</label>
                         <input type="email" id="doa-email" required>
+                        <span class="field-error" id="doa-email-error"></span> <!-- Mensagem de erro do campo E-mail -->
                     </div>
                     <div class="input-group">
                         <label for="doa-cpf">CPF</label>
                         <input type="text" id="doa-cpf" required>
+                        <span class="field-error" id="doa-cpf-error"></span> <!-- Mensagem de erro do campo CPF -->
                     </div>
                     <div class="input-group">
                         <label for="doa-senha">Senha</label>
                         <input type="password" id="doa-senha" required>
+                        <span class="field-error" id="doa-senha-error"></span> <!-- Mensagem de erro do campo Senha -->
                     </div>
                     <div class="input-group">
                         <label for="doa-conf-senha">Confirmar senha</label>
                         <input type="password" id="doa-conf-senha" required>
+                        <span class="field-error" id="doa-conf-senha-error"></span> <!-- Mensagem de erro do campo Confirmar senha -->
                     </div>
                     
                     <div class="checkbox-group">
@@ -160,19 +186,10 @@
         </section>
     </main>
 
-    <!-- Script para alternar as telas -->
-    <script>
-        function switchScreen(screenName) {
-            document.querySelectorAll('.form-screen').forEach(el => el.classList.remove('active'));
-            document.getElementById(`screen-${screenName}`).classList.add('active');
-            
-            const header = document.querySelector('.auth-header');
-            if (screenName === 'sucesso') {
-                header.style.display = 'none';
-            } else {
-                header.style.display = 'block';
-            }
-        }
-    </script>
+    <!-- Script para alternar as telas 
+    Deletado do html e colocado dentro do arquivo cadastro.js, para deixar o código mais organizado -->
+
+    <!-- Lógica de troca de tela e validação dos formulários --> 
+    <script src="js/cadastro.js"></script>
 </body>
 </html>
