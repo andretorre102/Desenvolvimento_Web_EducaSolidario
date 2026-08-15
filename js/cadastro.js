@@ -22,10 +22,10 @@ function switchScreen(screenName) {
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Regex simples: algumacoisa@agulmacoisa.algumacoisa
 
-function limparErros(prefixo) {
-    document.querySelectorAll(`[id^="${prefixo}-"][id$="-error"]`)
+function limparErros(prefixoCampo, tipoTela) {
+    document.querySelectorAll(`[id^="${prefixoCampo}-"][id$="-error"]`)
         .forEach(span => span.textContent = '');
-    document.querySelectorAll(`#screen-${prefixo} .input-group input`)
+    document.querySelectorAll(`#screen-${tipoTela} input`)
         .forEach(input => input.classList.remove('input-invalid'));
 }
 
@@ -48,7 +48,7 @@ function validarFormulario(event, tipo) {
 
     const prefixo = tipo === 'instituicao' ? 'inst' : 'doa';
     const screenId = tipo; // 'instituicao' ou 'doador'
-    limparErros(screenId);
+    limparErros(prefixo, screenId);
 
     let valido = true;
 
@@ -99,7 +99,7 @@ function validarFormulario(event, tipo) {
     const termsId = `${prefixo}-terms`;
     const terms = document.getElementById(termsId);
     if (!terms.checked) {
-        mostrarMensagemFormulario(screenId, 'error', 'Você precisa aceitar os Termos de Uso para continuar.');
+        mostrarErroCampo(termsId, 'Você precisa aceitar os Termos de Uso para continuar.');
         valido = false;
     }
 
@@ -112,4 +112,3 @@ function validarFormulario(event, tipo) {
     switchScreen('sucesso');
     return false;
 }
-
