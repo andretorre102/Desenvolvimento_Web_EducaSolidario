@@ -212,6 +212,54 @@ img {
     outline: 2px solid var(--color-secondary);
     background-color: var(--color-bg);
 }
+/* VALIDAÇÃO JS para campos inválidos [PF3]
+Incluí elementos de estilo do sistema de validação de formulário
+- .input-invalid: destaca em vermelho o campo que falhou na validação
+- .field-error: mensagem de erro específica de cada campo
+- .form-message: mensagem geral do formulário, no topo (erro ou sucesso,
+controlado pelas classes .error / .success; .empty a esconde quando
+não há mensagem) */
+
+.input-invalid {
+    outline: 2px solid #ef4444;
+    background-color: #fef2f2;
+}
+
+.field-error {
+    display: block;
+    min-height: 1rem;
+    font-size: 0.75rem;
+    color: #ef4444;
+    margin-top: 0.25rem;
+}
+
+.form-message {
+    font-size: 0.875rem;
+    padding: 0;
+    border-radius: var(--border-radius);
+    margin-bottom: 0;
+    transition: var(--transition);
+}
+
+.form-message:empty {
+    display: none;
+}
+
+.form-message.error {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.form-message.success {
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    background-color: #f0fdf4;
+    color: #15803d;
+    border: 1px solid #bbf7d0;
+}
 
 /* Checkbox */
 .checkbox-group {
