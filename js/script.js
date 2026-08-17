@@ -13,3 +13,13 @@ function iniciarSlideshow() {
 }
 
 iniciarSlideshow();
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btnCadastrar = document.querySelector('.btn-cadastrar');
+
+    if (btnCadastrar) {
+        btnCadastrar.addEventListener('click', function () {
+            window.location.href = 'cadastro.html';
+        });
+    }
+});
